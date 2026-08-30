@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://stanleys-toolbox.github.io/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stanleys-toolbox.github.io/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://stanleys-toolbox.github.io/zh-cn/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stanleys-toolbox.github.io/" />
+  </url>
+  <url>
+    <loc>https://stanleys-toolbox.github.io/zh-cn/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stanleys-toolbox.github.io/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://stanleys-toolbox.github.io/zh-cn/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stanleys-toolbox.github.io/" />
+  </url>
+  <url>
+    <loc>https://stanleys-toolbox.github.io/apps/deadline-wall/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stanleys-toolbox.github.io/apps/deadline-wall/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://stanleys-toolbox.github.io/zh-cn/apps/deadline-wall/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stanleys-toolbox.github.io/apps/deadline-wall/" />
+  </url>
+  <url>
+    <loc>https://stanleys-toolbox.github.io/zh-cn/apps/deadline-wall/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stanleys-toolbox.github.io/apps/deadline-wall/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://stanleys-toolbox.github.io/zh-cn/apps/deadline-wall/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stanleys-toolbox.github.io/apps/deadline-wall/" />
+  </url>
+  <url>
+    <loc>https://stanleys-toolbox.github.io/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stanleys-toolbox.github.io/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://stanleys-toolbox.github.io/zh-cn/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stanleys-toolbox.github.io/privacy/" />
+  </url>
+  <url>
+    <loc>https://stanleys-toolbox.github.io/zh-cn/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stanleys-toolbox.github.io/privacy/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://stanleys-toolbox.github.io/zh-cn/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stanleys-toolbox.github.io/privacy/" />
+  </url>
+  <url>
+    <loc>https://stanleys-toolbox.github.io/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stanleys-toolbox.github.io/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://stanleys-toolbox.github.io/zh-cn/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stanleys-toolbox.github.io/support/" />
+  </url>
+  <url>
+    <loc>https://stanleys-toolbox.github.io/zh-cn/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stanleys-toolbox.github.io/support/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://stanleys-toolbox.github.io/zh-cn/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stanleys-toolbox.github.io/support/" />
+  </url>
+</urlset>
