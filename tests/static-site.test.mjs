@@ -92,6 +92,7 @@ test("keeps the homepage focused on the toolbox and product details on the app p
   const homepage = await html("index.html");
   const product = await html("apps/deadline-wall/index.html");
   const chineseHomepage = await html("zh-cn/index.html");
+  const chineseProduct = await html("zh-cn/apps/deadline-wall/index.html");
 
   assert.match(homepage, /id=["']tools["']/i);
   assert.match(homepage, /href=["']\/apps\/deadline-wall\/["']/i);
@@ -105,6 +106,12 @@ test("keeps the homepage focused on the toolbox and product details on the app p
   assert.match(product, /src=["']\/deadline-wall-wall\.jpg["']/i);
   assert.match(product, /<video\b(?=[^>]*\bcontrols\b)(?![^>]*\bautoplay\b)/i);
   assert.match(product, /Sound effects only · No narration/);
+
+  for (const productPage of [product, chineseProduct]) {
+    const filmIndex = productPage.indexOf('class="film-section product-film"');
+    const featuresIndex = productPage.indexOf('class="feature-section light-section"');
+    assert.ok(filmIndex >= 0 && filmIndex < featuresIndex, "film should be the second product section");
+  }
 
   for (const staleAnchor of ["#film", "#principles", "#apps"]) {
     assert.doesNotMatch(homepage, new RegExp(`href=["']${staleAnchor}["']`, "i"));

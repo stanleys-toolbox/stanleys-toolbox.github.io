@@ -168,6 +168,29 @@ export function DeadlineWallPage({ locale }: { locale: Locale }) {
           </figure>
         </section>
 
+        <section className="film-section product-film" id="film" aria-labelledby="product-film-heading">
+          <div className="section-heading">
+            <p className="section-kicker">{text.filmKicker}</p>
+            <h2 id="product-film-heading">{text.filmTitle}</h2>
+            <p>{text.privacyLine}</p>
+            <a className="text-link" href={pagePath(locale, "privacy")}>
+              {text.privacyLink} ↗
+            </a>
+          </div>
+          <div className="film-frame">
+            <video controls preload="metadata" poster="/deadline-wall-poster.jpg">
+              <source src="/deadline-wall-film.mp4" type="video/mp4" />
+              <track
+                kind="captions"
+                src={locale === "en" ? "/deadline-wall-captions-en.vtt" : "/deadline-wall-captions-zh.vtt"}
+                srcLang={locale === "en" ? "en" : "zh-CN"}
+                label={locale === "en" ? "English sound captions" : "中文音效字幕"}
+              />
+            </video>
+            <p className="media-note">{text.filmNote}</p>
+          </div>
+        </section>
+
         <section className="feature-section light-section" aria-labelledby="features-heading">
           <div className="section-heading section-heading-dark compact-heading">
             <p className="section-kicker">{text.featuresKicker}</p>
@@ -211,29 +234,6 @@ export function DeadlineWallPage({ locale }: { locale: Locale }) {
               <li key={item}>{item}</li>
             ))}
           </ul>
-        </section>
-
-        <section className="film-section product-film" id="film" aria-labelledby="product-film-heading">
-          <div className="section-heading">
-            <p className="section-kicker">{text.filmKicker}</p>
-            <h2 id="product-film-heading">{text.filmTitle}</h2>
-            <p>{text.privacyLine}</p>
-            <a className="text-link" href={pagePath(locale, "privacy")}>
-              {text.privacyLink} ↗
-            </a>
-          </div>
-          <div className="film-frame">
-            <video controls preload="metadata" poster="/deadline-wall-poster.jpg">
-              <source src="/deadline-wall-film.mp4" type="video/mp4" />
-              <track
-                kind="captions"
-                src={locale === "en" ? "/deadline-wall-captions-en.vtt" : "/deadline-wall-captions-zh.vtt"}
-                srcLang={locale === "en" ? "en" : "zh-CN"}
-                label={locale === "en" ? "English sound captions" : "中文音效字幕"}
-              />
-            </video>
-            <p className="media-note">{text.filmNote}</p>
-          </div>
         </section>
 
         <section className="release-section" aria-labelledby="release-heading">
