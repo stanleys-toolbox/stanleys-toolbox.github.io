@@ -1713,6 +1713,61 @@ video:focus-visible {
   box-shadow: 0 24px 62px rgba(74, 48, 29, 0.16);
 }
 
+@media (min-width: 981px) {
+  .product-hero {
+    width: min(1380px, calc(100% - 64px));
+    padding: 82px 0 104px;
+    grid-template-columns: minmax(330px, 0.62fr) minmax(0, 1.48fr);
+    gap: clamp(36px, 4vw, 64px);
+  }
+
+  .product-hero-copy {
+    max-width: 410px;
+  }
+
+  .product-hero .app-identity {
+    margin-bottom: 28px;
+    gap: 14px;
+  }
+
+  .product-hero .app-identity img {
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+  }
+
+  .product-hero h1 {
+    max-width: 410px;
+    font-size: clamp(52px, 4.6vw, 70px);
+    line-height: 0.98;
+  }
+
+  .product-hero .hero-intro {
+    max-width: 410px;
+    margin-top: 24px;
+    line-height: 1.65;
+  }
+
+  .product-hero .hero-actions {
+    margin-top: 30px;
+  }
+
+  .product-hero .requirement-list {
+    margin-top: 26px;
+    padding-top: 18px;
+    gap: 16px;
+  }
+
+  .product-hero-visual,
+  .product-hero-visual img {
+    width: 100%;
+  }
+
+  .product-hero-visual {
+    justify-self: end;
+  }
+}
+
 .feature-section,
 .detail-section,
 .faq-section,
