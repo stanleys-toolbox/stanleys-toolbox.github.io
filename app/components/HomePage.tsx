@@ -12,7 +12,7 @@ const copy = {
     toolsTitle: "One clear job at a time.",
     toolsIntro:
       "A growing shelf of small, purpose-built apps. Open a tool to see the full story, features, and release details.",
-    toolStatus: "Preview",
+    toolStatus: "Public preview",
     productDetail:
       "Keep important deadlines on your desktop, without getting in the way.",
     platform: "macOS 14+",
@@ -33,7 +33,7 @@ const copy = {
     toolsTitle: "一次，认真解决一个明确的问题。",
     toolsIntro:
       "这里会逐渐收录小而专注的应用。进入具体工具页面，可以查看完整介绍、功能与发布状态。",
-    toolStatus: "预览版",
+    toolStatus: "公开预览版",
     productDetail:
       "把重要的截止日期留在桌面上，同时不挡住你的工作。",
     platform: "macOS 14+",

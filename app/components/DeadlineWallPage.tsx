@@ -1,16 +1,18 @@
 /* eslint-disable @next/next/no-img-element -- static export uses pre-sized local assets */
+import { deadlineWallRelease as release } from "../lib/deadline-wall-release";
 import { pagePath, type Locale } from "../lib/site";
 import { SiteFrame } from "./SiteChrome";
 
 const copy = {
   en: {
-    status: "Tool 01 · Preview",
+    status: "Tool 01 · Public preview",
     eyebrow: "Native countdown wall for macOS",
     title: "Keep important deadlines in view.",
     intro:
       "Deadline Wall is a desktop countdown wall for macOS. It keeps due dates at the desktop level, behind ordinary app windows, and updates their urgency as time passes.",
+    download: "Download for macOS",
     watch: "Watch the preview film",
-    availability: "Public download coming later",
+    availability: `Version ${release.version} · Unsigned public preview`,
     requirements: ["macOS 14+", "Local-first", "No account required"],
     visualAlt: "Deadline Wall preview with six synthetic countdown cards arranged in a grid",
     line: "Right on your desktop. Out of your way.",
@@ -61,19 +63,22 @@ const copy = {
     privacyLine:
       "No account. No network required. Deadline data is stored locally on your Mac.",
     privacyLink: "Read the privacy details",
-    releaseKicker: "Availability",
-    releaseTitle: "Deadline Wall is currently in preview.",
+    releaseKicker: "Download",
+    releaseTitle: `Deadline Wall ${release.version} is available.`,
     releaseBody:
-      "A public download will appear here only after the release build, system requirements, signing, and notarization have been verified.",
+      "Download the unsigned public preview and review the macOS approval and file-verification steps before opening it.",
+    releaseMeta: `${release.minimumOS} · ${release.architectures} · ${release.fileSize}`,
+    releaseAction: "Go to download",
   },
   "zh-CN": {
-    status: "工具 01 · 预览版",
+    status: "工具 01 · 公开预览版",
     eyebrow: "原生 macOS 倒计时墙",
     title: "让重要的截止日期始终在视野中。",
     intro:
       "Deadline Wall 是一款 macOS 桌面倒计时墙。它把截止日期放在桌面层级、普通应用窗口之后，并随着时间自动更新紧急程度。",
+    download: "下载 macOS 版",
     watch: "观看预览短片",
-    availability: "公开下载稍后提供",
+    availability: `版本 ${release.version} · 未签名公开预览版`,
     requirements: ["macOS 14+", "本地优先", "无需账号"],
     visualAlt: "由六张合成数据倒计时卡片组成的 Deadline Wall 预览网格",
     line: "就在桌面上，不挡你的路。",
@@ -123,10 +128,12 @@ const copy = {
     filmNote: "渲染制作的产品短片 · 仅有音效 · 没有旁白",
     privacyLine: "无需账号或网络连接。截止日期数据保存在你的 Mac 本地。",
     privacyLink: "查看隐私详情",
-    releaseKicker: "提供状态",
-    releaseTitle: "Deadline Wall 目前仍是预览版。",
+    releaseKicker: "下载",
+    releaseTitle: `Deadline Wall ${release.version} 已可下载。`,
     releaseBody:
-      "只有在发布构建、系统要求、签名和公证均验证完成后，公开下载链接才会出现在这里。",
+      "这是未经 Apple 签名或公证的公开预览版；下载页面提供了首次启动许可和文件验证步骤。",
+    releaseMeta: `${release.minimumOS} · Apple Silicon + Intel · ${release.fileSize}`,
+    releaseAction: "前往下载页面",
   },
 } as const;
 
@@ -146,11 +153,14 @@ export function DeadlineWallPage({ locale }: { locale: Locale }) {
             <h1 id="product-title">{text.title}</h1>
             <p className="hero-intro">{text.intro}</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#film">
+              <a className="button button-primary" href={pagePath(locale, "deadlineWallDownload")}>
+                {text.download}
+              </a>
+              <a className="button button-secondary" href="#film">
                 {text.watch}
               </a>
-              <span className="availability-note">{text.availability}</span>
             </div>
+            <span className="availability-note">{text.availability}</span>
             <ul className="requirement-list" aria-label={locale === "en" ? "Requirements" : "要求"}>
               {text.requirements.map((item) => (
                 <li key={item}>{item}</li>
@@ -241,6 +251,10 @@ export function DeadlineWallPage({ locale }: { locale: Locale }) {
           <div>
             <h2 id="release-heading">{text.releaseTitle}</h2>
             <p>{text.releaseBody}</p>
+            <p className="release-meta">{text.releaseMeta}</p>
+            <a className="button button-primary release-button" href={pagePath(locale, "deadlineWallDownload")}>
+              {text.releaseAction} <span aria-hidden="true">→</span>
+            </a>
           </div>
         </section>
       </main>

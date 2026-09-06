@@ -9,6 +9,8 @@ const routes = [
   ["zh-cn/index.html", "zh-CN"],
   ["apps/deadline-wall/index.html", "en"],
   ["zh-cn/apps/deadline-wall/index.html", "zh-CN"],
+  ["apps/deadline-wall/download/index.html", "en"],
+  ["zh-cn/apps/deadline-wall/download/index.html", "zh-CN"],
   ["privacy/index.html", "en"],
   ["zh-cn/privacy/index.html", "zh-CN"],
   ["support/index.html", "en"],
@@ -65,7 +67,7 @@ test("keeps the English and Chinese product claims aligned", async () => {
     "Automatic urgency",
     "Focus Mode",
     "No account",
-    "currently in preview",
+    "Public preview",
   ]) {
     assert.match(english, new RegExp(claim, "i"));
   }
@@ -76,7 +78,7 @@ test("keeps the English and Chinese product claims aligned", async () => {
     "自动更新紧急程度",
     "专注模式",
     "无需账号",
-    "目前仍是预览版",
+    "公开预览版",
   ]) {
     assert.match(chinese, new RegExp(claim));
   }
@@ -104,6 +106,8 @@ test("keeps the homepage focused on the toolbox and product details on the app p
 
   assert.match(product, /class=["']product-hero-visual["']/i);
   assert.match(product, /src=["']\/deadline-wall-wall\.jpg["']/i);
+  assert.match(product, /href=["']\/apps\/deadline-wall\/download\/["']/i);
+  assert.match(chineseProduct, /href=["']\/zh-cn\/apps\/deadline-wall\/download\/["']/i);
   assert.match(product, /<video\b(?=[^>]*\bcontrols\b)(?![^>]*\bautoplay\b)/i);
   assert.match(product, /Sound effects only · No narration/);
 
@@ -142,6 +146,31 @@ test("keeps the homepage focused on the toolbox and product details on the app p
   ]);
   assert.match(englishCaptions, /Countdown tick; transition sound/);
   assert.match(chineseCaptions, /倒计时提示音；换页音效/);
+});
+
+test("publishes matching bilingual download pages for the verified GitHub release", async () => {
+  const english = await html("apps/deadline-wall/download/index.html");
+  const chinese = await html("zh-cn/apps/deadline-wall/download/index.html");
+  const downloadUrl =
+    "https://github.com/stanleys-toolbox/deadline-wall/releases/download/v1.0.0/DeadlineWall-1.0.0-macOS.dmg";
+  const sha256 = "493c03a83cea0b3d0b864b056454bdb5477e6ff259e71dd2e21eb85b898f4d37";
+
+  for (const page of [english, chinese]) {
+    assert.match(page, new RegExp(downloadUrl.replaceAll(".", "\\.")));
+    assert.match(page, new RegExp(sha256));
+    assert.match(page, /4\.4 MB/);
+    assert.match(page, /macOS 14\+/);
+    assert.match(page, /Apple silicon \+ Intel/);
+  }
+
+  assert.match(english, /Unsigned preview/);
+  assert.match(chinese, /未签名预览版/);
+  assert.match(english, /Unsigned and not notarized/);
+  assert.match(chinese, /未签名、未公证/);
+  assert.match(english, /not signed or notarized/i);
+  assert.match(english, /Open Anyway/);
+  assert.match(chinese, /没有通过 Apple Developer Program 签名或公证/);
+  assert.match(chinese, /仍要打开/);
 });
 
 test("does not embed local paths or raw screenshot references", async () => {

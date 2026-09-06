@@ -51,9 +51,10 @@ following before publishing:
 
 ## Public status
 
-Deadline Wall is presented as a preview. The site intentionally does not offer
-a download until a release artifact, requirements, signing, and notarization
-have been verified.
+Deadline Wall 1.0.0 is available as an unsigned public preview. The bilingual
+download pages link to the versioned DMG hosted by the app repository's GitHub
+Release and clearly document the first-launch approval and SHA-256 verification
+steps.
 
 ## Public media
 

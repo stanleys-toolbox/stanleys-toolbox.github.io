@@ -1699,6 +1699,15 @@ video:focus-visible {
   color: white;
 }
 
+.product-hero .availability-note {
+  display: block;
+  margin-top: 14px;
+  color: var(--accent-strong);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
 .requirement-list li::before,
 .text-link,
 .feature-grid article > span,
@@ -1820,6 +1829,349 @@ video:focus-visible {
   color: #c9beb3;
 }
 
+.release-meta {
+  margin-top: 18px !important;
+  color: var(--product-accent) !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.release-button {
+  margin-top: 24px;
+  background: var(--product-accent);
+  color: white;
+}
+
+/* Deadline Wall download */
+.download-main {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.download-hero {
+  padding: 88px 0 78px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.68fr);
+  gap: clamp(56px, 8vw, 116px);
+  align-items: center;
+}
+
+.download-back {
+  width: max-content;
+  margin-bottom: 48px;
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.download-back:hover,
+.download-github-link:hover {
+  color: var(--product-accent);
+}
+
+.download-hero h1,
+.download-section h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.download-hero h1 {
+  max-width: 680px;
+  font-size: clamp(52px, 6.3vw, 84px);
+  line-height: 0.98;
+}
+
+.download-hero-copy > p:last-child {
+  max-width: 660px;
+  margin: 30px 0 0;
+  color: var(--muted);
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.72;
+}
+
+.download-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 22px 56px rgba(74, 48, 29, 0.1);
+}
+
+.download-card-heading {
+  padding-bottom: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.download-card-heading img {
+  width: 62px;
+  height: 62px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(18, 111, 129, 0.13);
+}
+
+.download-card-heading div {
+  display: grid;
+  gap: 6px;
+}
+
+.download-card-heading strong {
+  font-size: 20px;
+  letter-spacing: -0.025em;
+}
+
+.download-card-heading span {
+  width: max-content;
+  padding: 5px 9px;
+  border: 1px solid rgba(18, 111, 129, 0.22);
+  border-radius: 999px;
+  background: rgba(46, 163, 184, 0.08);
+  color: var(--product-accent);
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.download-meta {
+  margin: 8px 0 24px;
+}
+
+.download-meta > div {
+  padding: 12px 0;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.download-meta dt,
+.download-meta dd {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.download-meta dt {
+  color: var(--muted);
+}
+
+.download-meta dd {
+  color: var(--ink);
+  font-weight: 650;
+  text-align: right;
+}
+
+.download-button {
+  width: 100%;
+  background: var(--product-accent);
+  color: white;
+}
+
+.download-card-warning {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(166, 83, 53, 0.2);
+  border-radius: 10px;
+  background: rgba(241, 216, 199, 0.32);
+  color: var(--accent-strong);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.download-github-link {
+  width: max-content;
+  margin: 17px auto 0;
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.download-notice {
+  padding: 30px 34px;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 22px;
+  border: 1px solid rgba(166, 83, 53, 0.26);
+  border-radius: 18px;
+  background: rgba(241, 216, 199, 0.38);
+}
+
+.download-notice > span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(166, 83, 53, 0.36);
+  border-radius: 50%;
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.download-notice h2 {
+  margin: 2px 0 10px;
+  font-size: 20px;
+}
+
+.download-notice p {
+  max-width: 880px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.download-notice p + p {
+  margin-top: 8px;
+}
+
+.download-section {
+  padding: 86px 0;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.62fr) minmax(0, 1.38fr);
+  gap: clamp(54px, 9vw, 128px);
+  border-top: 1px solid var(--line);
+}
+
+.download-notice + .download-section {
+  margin-top: 82px;
+}
+
+.download-section h2 {
+  max-width: 440px;
+  font-size: clamp(36px, 4.4vw, 56px);
+  line-height: 1.04;
+}
+
+.download-section-heading > p:last-child {
+  margin: 24px 0 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.install-steps,
+.release-notes-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.install-steps li {
+  padding: 25px 0;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.install-steps li:first-child {
+  padding-top: 0;
+}
+
+.install-steps li > span {
+  color: var(--product-accent);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.install-steps h3 {
+  margin: -3px 0 7px;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.install-steps p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.release-notes-list {
+  border-top: 1px solid var(--line);
+}
+
+.release-notes-list li {
+  padding: 17px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.release-notes-list li::before {
+  content: "—";
+  margin-right: 12px;
+  color: var(--product-accent);
+}
+
+.verification-card {
+  padding: 28px;
+  display: grid;
+  gap: 12px;
+  align-self: start;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.verification-card span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.verification-card span:not(:first-child) {
+  margin-top: 10px;
+}
+
+.verification-card code {
+  padding: 14px 16px;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-muted);
+  color: var(--ink);
+  font: 12px/1.65 ui-monospace, SFMono-Regular, Menlo, monospace;
+  user-select: all;
+}
+
+.download-closing {
+  padding: 52px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 34px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.download-closing > p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.download-closing > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+}
+
+.download-closing .text-link {
+  margin-top: 0;
+  white-space: nowrap;
+}
+
 .document-action {
   background: var(--accent-strong);
   color: #fffaf4;
@@ -1861,6 +2213,23 @@ video:focus-visible {
   .tool-card {
     min-height: 330px;
   }
+
+  .download-hero,
+  .download-section {
+    grid-template-columns: 1fr;
+  }
+
+  .download-hero {
+    gap: 48px;
+  }
+
+  .download-card {
+    max-width: 560px;
+  }
+
+  .download-section {
+    gap: 44px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1878,7 +2247,8 @@ video:focus-visible {
   .support-contact,
   .faq-section,
   .document-main,
-  .support-main {
+  .support-main,
+  .download-main {
     width: min(100% - 32px, 1120px);
   }
 
@@ -1916,6 +2286,42 @@ video:focus-visible {
   .tool-index h2 {
     font-size: clamp(38px, 11vw, 54px);
   }
+
+  .download-hero {
+    padding: 64px 0 58px;
+  }
+
+  .download-back {
+    margin-bottom: 38px;
+  }
+
+  .download-hero h1 {
+    font-size: clamp(46px, 13vw, 66px);
+  }
+
+  .download-card,
+  .download-notice,
+  .verification-card {
+    padding: 24px;
+  }
+
+  .download-notice {
+    grid-template-columns: 1fr;
+  }
+
+  .download-notice + .download-section {
+    margin-top: 66px;
+  }
+
+  .download-section {
+    padding: 66px 0;
+  }
+
+  .download-closing {
+    padding: 44px 0;
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 430px) {
@@ -1927,5 +2333,18 @@ video:focus-visible {
     align-items: flex-start;
     flex-direction: column;
     gap: 9px;
+  }
+
+  .download-meta > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .download-meta dd {
+    text-align: left;
+  }
+
+  .verification-card code {
+    margin-inline: -8px;
   }
 }

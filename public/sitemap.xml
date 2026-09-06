@@ -26,6 +26,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://stanleys-toolbox.github.io/apps/deadline-wall/" />
   </url>
   <url>
+    <loc>https://stanleys-toolbox.github.io/apps/deadline-wall/download/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stanleys-toolbox.github.io/apps/deadline-wall/download/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://stanleys-toolbox.github.io/zh-cn/apps/deadline-wall/download/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stanleys-toolbox.github.io/apps/deadline-wall/download/" />
+  </url>
+  <url>
+    <loc>https://stanleys-toolbox.github.io/zh-cn/apps/deadline-wall/download/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stanleys-toolbox.github.io/apps/deadline-wall/download/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://stanleys-toolbox.github.io/zh-cn/apps/deadline-wall/download/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stanleys-toolbox.github.io/apps/deadline-wall/download/" />
+  </url>
+  <url>
     <loc>https://stanleys-toolbox.github.io/privacy/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://stanleys-toolbox.github.io/privacy/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://stanleys-toolbox.github.io/zh-cn/privacy/" />

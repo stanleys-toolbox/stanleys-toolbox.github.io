@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 
 export type Locale = "en" | "zh-CN";
-export type PageKey = "home" | "deadlineWall" | "privacy" | "support";
+export type PageKey =
+  | "home"
+  | "deadlineWall"
+  | "deadlineWallDownload"
+  | "privacy"
+  | "support";
 
 export const SITE_URL = "https://stanleys-toolbox.github.io";
 export const SUPPORT_URL =
@@ -11,12 +16,14 @@ export const pagePaths: Record<Locale, Record<PageKey, string>> = {
   en: {
     home: "/",
     deadlineWall: "/apps/deadline-wall/",
+    deadlineWallDownload: "/apps/deadline-wall/download/",
     privacy: "/privacy/",
     support: "/support/",
   },
   "zh-CN": {
     home: "/zh-cn/",
     deadlineWall: "/zh-cn/apps/deadline-wall/",
+    deadlineWallDownload: "/zh-cn/apps/deadline-wall/download/",
     privacy: "/zh-cn/privacy/",
     support: "/zh-cn/support/",
   },
