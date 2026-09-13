@@ -58,7 +58,7 @@ steps.
 
 ## Public media
 
-- `public/deadline-wall-film.mp4`: final 30-second product film
+- `public/deadline-wall-promo-en.mp4`: current 30-second product film (both locales)
 - `public/deadline-wall-poster.jpg`: product-film poster
 - `public/quick-add-enabled.png`: deterministic synthetic Quick Add snapshot
 - `public/stanleys-toolbox-og.png`: generated social sharing artwork

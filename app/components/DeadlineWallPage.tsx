@@ -59,7 +59,7 @@ const copy = {
     ],
     filmKicker: "Preview film",
     filmTitle: "See the wall in motion.",
-    filmNote: "Rendered product film · Sound effects only · No narration",
+    filmNote: "30-second product film",
     privacyLine:
       "No account. No network required. Deadline data is stored locally on your Mac.",
     privacyLink: "Read the privacy details",
@@ -125,7 +125,7 @@ const copy = {
     ],
     filmKicker: "预览短片",
     filmTitle: "看看倒计时墙如何工作。",
-    filmNote: "渲染制作的产品短片 · 仅有音效 · 没有旁白",
+    filmNote: "30 秒产品短片",
     privacyLine: "无需账号或网络连接。截止日期数据保存在你的 Mac 本地。",
     privacyLink: "查看隐私详情",
     releaseKicker: "下载",
@@ -188,14 +188,10 @@ export function DeadlineWallPage({ locale }: { locale: Locale }) {
             </a>
           </div>
           <div className="film-frame">
+            {/* No matching caption file was supplied; the previous film's sound cues do not apply. */}
+            {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
             <video controls preload="metadata" poster="/deadline-wall-poster.jpg">
-              <source src="/deadline-wall-film.mp4" type="video/mp4" />
-              <track
-                kind="captions"
-                src={locale === "en" ? "/deadline-wall-captions-en.vtt" : "/deadline-wall-captions-zh.vtt"}
-                srcLang={locale === "en" ? "en" : "zh-CN"}
-                label={locale === "en" ? "English sound captions" : "中文音效字幕"}
-              />
+              <source src="/deadline-wall-promo-en.mp4" type="video/mp4" />
             </video>
             <p className="media-note">{text.filmNote}</p>
           </div>

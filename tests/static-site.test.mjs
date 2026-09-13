@@ -109,9 +109,12 @@ test("keeps the homepage focused on the toolbox and product details on the app p
   assert.match(product, /href=["']\/apps\/deadline-wall\/download\/["']/i);
   assert.match(chineseProduct, /href=["']\/zh-cn\/apps\/deadline-wall\/download\/["']/i);
   assert.match(product, /<video\b(?=[^>]*\bcontrols\b)(?![^>]*\bautoplay\b)/i);
-  assert.match(product, /Sound effects only · No narration/);
+  assert.match(product, /30-second product film/);
 
   for (const productPage of [product, chineseProduct]) {
+    assert.ok(productPage.includes('src="/deadline-wall-promo-en.mp4"'));
+    assert.ok(!productPage.includes('src="/deadline-wall-film.mp4"'));
+    assert.doesNotMatch(productPage, /<track\b/);
     const filmIndex = productPage.indexOf('class="film-section product-film"');
     const featuresIndex = productPage.indexOf('class="feature-section light-section"');
     assert.ok(filmIndex >= 0 && filmIndex < featuresIndex, "film should be the second product section");
@@ -122,7 +125,7 @@ test("keeps the homepage focused on the toolbox and product details on the app p
   }
 
   for (const asset of [
-    "deadline-wall-film.mp4",
+    "deadline-wall-promo-en.mp4",
     "deadline-wall-poster.jpg",
     "deadline-wall-wall.jpg",
     "deadline-wall-icon.png",
@@ -137,7 +140,7 @@ test("keeps the homepage focused on the toolbox and product details on the app p
     await access(path.join(outputRoot, asset));
   }
 
-  const film = await stat(path.join(outputRoot, "deadline-wall-film.mp4"));
+  const film = await stat(path.join(outputRoot, "deadline-wall-promo-en.mp4"));
   assert.ok(film.size > 1_000_000);
 
   const [englishCaptions, chineseCaptions] = await Promise.all([
